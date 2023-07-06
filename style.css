@@ -1,0 +1,114 @@
+body {
+  background-color: #f5f5f5;
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 40px;
+  opacity: 0;
+  animation: fade-in 1s ease forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#mode-selection {
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fade-in 1s ease forwards;
+}
+
+#game-container {
+  display: none;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 240px;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fade-in 1s ease forwards;
+}
+
+.cell {
+  width: 76px;
+  height: 76px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+#reset-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: none;
+  background-color: #ccc;
+  color: #333;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#reset-button:hover {
+  background-color: #999;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: none;
+  background-color: #4287f5; /*if u wanna change color*/
+  color: #fff;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #296cd1;
+}
+
+#reset-button {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 4px;
+  border: none;
+  background-color: #ccc;
+  color: #333;
+  cursor: pointer;
+}
