@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
         cell.classList.add("animate-mark");
       });
       setTimeout(() => {
-        alert(`Player ${currentPlayer} wins!`);
+        alert(`Player ${getOpponent(currentPlayer)} wins!`);
         resetGame();
       }, 500);
     } else if (isGameDrawn) {
@@ -98,4 +98,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("mode-selection").style.display = "flex";
     document.getElementById("game-container").style.display = "none";
   }
+
+  function getOpponent(player) {
+    return player === "X" ? "O" : "X";
+  }
 });
+
